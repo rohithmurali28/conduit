@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 355px;
+  }
+  
+  .navlinks {
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .navlinks:hover, .navlinks:focus{
+   color:black
+  }
+  
+  .rightheader {
+    display: flex;
+  }
+  
+  .leftheader {
+    font-family: titillium web, sans-serif;
+    color: #5cb85c;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .bodymain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #5cb85c;
+    padding: 51px;
+    color: white;
+  }
+  
+  .subheading1{
+    font-weight: 600;
+      font-family: titillium web,sans-serif;
+      font-size: xxx-large;
+  }
+  
+  .subheading2{
+    font-size: x-large;
+  }

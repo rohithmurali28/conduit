@@ -1,0 +1,60 @@
+
+.signInContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 663px;    
+}
+
+.signInHeader{
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 36px;
+}
+
+.signInsubheading
+{
+    color: #5cb85c;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.signInsubheading:hover
+{
+    color: hsl(120, 27%, 21%);
+    text-decoration:underline;
+    
+}
+
+.email,.password,.username{
+    padding: 15px;
+    margin: 10px;
+    color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width:100%;
+    border: 1px solid rgba(0,0,0,.15);
+    font-size: 18px;
+}
+
+.email:focus,.password:focus,.username:focus{
+    border: 1px solid lightskyblue; 
+    outline:none;
+}
+
+.signInBtn{
+    padding: 14px 25px;
+    background-color: #5cb85c;
+    color: #fff;
+    float: right;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    align-self: flex-end; 
+}
+
+.error{
+    color:rgb(119, 7, 7);   
+    align-self: flex-start; 
+}
+
