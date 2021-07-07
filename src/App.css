@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 140px;
+ 
 }
 
 .navlinks {
@@ -27,7 +27,7 @@
   justify-content: center;
   align-items: center;
   background: #5cb85c;
-  padding: 51px;
+ 
   color: white;
 }
 
@@ -39,4 +39,11 @@
 
 .subheading2{
   font-size: x-large;
+}
+
+.appContainer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

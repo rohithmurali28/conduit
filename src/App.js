@@ -17,7 +17,7 @@ componentDidMount(){
   
   render() {
     return (
-      <div>
+      <div className="appContainer">
        <HomeScreen/>
       </div>
     );

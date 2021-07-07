@@ -15,7 +15,7 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <Router>
-      <div>
+      <div className="homeScreen">
        
           <div className="header">
             <div className="leftheader">conduit</div>
@@ -25,8 +25,8 @@ export default class HomeScreen extends Component {
             <Link className="navlinks" to="/signup">Sign up</Link>
             </div>
           </div>     
-       
-      </div>
+       </div>
+     
       <Switch>
           <Route exact path="/">
           <Home/>
@@ -37,7 +37,7 @@ export default class HomeScreen extends Component {
           <Route path="/signup">
             <Signup token={this.props.token}/>
           </Route>
-        </Switch>
+        </Switch> 
       </Router>
     );
   }

@@ -1,6 +1,6 @@
 .subbody
 {
-    margin: 5px 359px;
+   width:80vw
 }
 
 .subheader{
@@ -12,3 +12,14 @@
 hr{
     border: 0.1px solid #e5e5e5;
 }
+
+.subbodyContainer{
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   }
+
+   .popularTagsContainer{
+       display: flex;
+   }

@@ -1,5 +1,5 @@
 img{
-    width:37px;
+    width:33px;
     padding:2px;
     border-radius: 50%;
 }
@@ -47,5 +47,9 @@ img{
 .likeButton:hover{
     background-color: #3d8b3d;
     color: white;
+}
+
+.likeButton{
+    color:#3d8b3d;
 }
 
