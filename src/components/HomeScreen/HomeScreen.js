@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./HomeScreenstyle.css";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
   Link
@@ -9,12 +9,13 @@ import {
 import SignIn from "../Signin/SignIn";
 import Signup from "../Signin/Signup";
 import Home from "./Home";
+import ArticleDetails from "./ArtcileDetails/ArticleDetails";
 
 
 export default class HomeScreen extends Component {
   render() {
     return (
-      <Router>
+      <BrowserRouter>
       <div className="homeScreen">
        
           <div className="header">
@@ -29,7 +30,7 @@ export default class HomeScreen extends Component {
      
       <Switch>
           <Route exact path="/">
-          <Home/>
+            <Home/>
           </Route>
           <Route path="/signin">
             <SignIn/>
@@ -37,8 +38,10 @@ export default class HomeScreen extends Component {
           <Route path="/signup">
             <Signup token={this.props.token}/>
           </Route>
+          <Route path="/articles/:slugid" component={ArticleDetails}>
+          </Route>
         </Switch> 
-      </Router>
+      </BrowserRouter>
     );
   }
 }

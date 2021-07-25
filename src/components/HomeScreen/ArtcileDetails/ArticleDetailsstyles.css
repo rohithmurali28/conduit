@@ -1,0 +1,24 @@
+
+  .bodymain {
+    background: #373a3c;
+    width:100vw;
+    color: white;
+    padding:20px;
+  }
+  
+  .subheading1{
+    font-weight: 600;
+      font-family: titillium web,sans-serif;
+      font-size: xxx-large;
+  }
+  
+  .subheading2{
+    font-size: x-large;
+  }
+
+  .homeContainer{
+    width:100vw;
+    display:flex;
+    flex-direction: column;
+
+  }
