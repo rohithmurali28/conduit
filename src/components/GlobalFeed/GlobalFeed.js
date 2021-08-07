@@ -18,7 +18,7 @@ export default class GlobalFeed extends Component {
                 <hr/>
 
             </div>
-            <div className="popularTagsContainer">
+            <div  className="popularTagsContainer"> 
             <PopularTags/>
             </div>
             </div>
