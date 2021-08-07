@@ -10,7 +10,7 @@ export default class GlobalFeed extends Component {
             <div className="subbodyContainer">
             <div className="subbody">
                 <div className="subheader">
-                    Global Feed
+                    Global  Feed
                 </div>
                
                 <hr/>
