@@ -19,7 +19,7 @@ export default class HomeScreen extends Component {
       <div className="homeScreen">
        
           <div className="header">
-            <div className="leftheader">conduit</div>
+            <Link to="/" className="leftheader">conduit</Link>
             <div className="rightheader">
             <Link className="navlinks" to="/">Home</Link>
             <Link className="navlinks" to="/signin">Sign in</Link>

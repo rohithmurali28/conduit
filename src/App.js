@@ -21,8 +21,6 @@ class App extends Component {
   render() {
     return (
       <div className="appContainer">
-        <button onClick={() => { this.props.increment(5) }}>+</button>
-        {this.props.count}
         <HomeScreen />
       </div>
     );

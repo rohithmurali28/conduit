@@ -24,6 +24,11 @@
     color: #5cb85c;
     font-size: 1.5rem;
     font-weight: 600;
+    text-decoration:none;
+  }
+
+  .leftheaderLink{
+    text-decoration:none;
   }
   
   .bodymain {

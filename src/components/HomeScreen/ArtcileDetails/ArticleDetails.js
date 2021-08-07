@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
+import "./ArticleDetailsstyles.css"
 
 class ArticleDetails extends Component {
     constructor(props)
@@ -22,24 +23,26 @@ class ArticleDetails extends Component {
     render() {
      console.log(this.state.articleSelected);
         return (
-                  
-            <div className="homeContainer">
-            <div className="bodymain">
+               <>   
+            <div className="articlehomeContainer">
+            <div className="articleBodyContainer">
+            <div className="articlebodymain">
             <div className="subheading1">{this.state.articleSelected.title}</div>
             <div className="subheading2"> 
             <div className="ustamp">
 
 <img src={this.state.articleSelected.author?.image} />
-<div>
-    <div className="userName">{this.state.articleSelected.author?.username}</div>
+<div style={{padding: "3px"}}>
+    <div className="articleuserName">{this.state.articleSelected.author?.username}</div>
     <div className="ustampDate">{new Date(this.state.articleSelected.updatedAt).toUTCString()}</div>
 </div>
 </div></div>
 </div>
-
-          {this.state.articleSelected.body}
-            </div>
-            
+</div><div className="articleSubbody">
+    <div>
+          {this.state.articleSelected.body}</div></div>
+          </div>  
+            </>
         )
     }
 }

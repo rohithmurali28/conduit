@@ -15,7 +15,8 @@ class Feed extends Component {
         super(props)
         this.state = {
             counter: 0,
-            articles: {}
+            articles: {},
+            setLoadingText:true
         }
     }
 
@@ -48,11 +49,13 @@ class Feed extends Component {
         axios.get(
             "https://conduit.productionready.io/api/articles?${limit(10, page)}").
             then((response) => {
-                this.setState({ articles: response.data.articles })
+                this.setState({ articles: response.data.articles ,setLoadingText:false})
                 this.props.addArticleDetails(response.data.articles);
                 
             })
-            .catch((reject) => { console.log(reject); })
+            .catch((reject) => { 
+               this.setState({setLoadingText:true}) ;
+                console.log(reject); })
 
     }
 
@@ -60,11 +63,11 @@ class Feed extends Component {
         let date = new Date();
         return (
             <>
-                {Object.keys(this.state.articles).map((key = article, article) => {
-                    console.log(this.state.articles[article].slug);
+                {this.state.setLoadingText ? <div style={{color:"#373a3c",marginTop:"10px"}}>Loading articles...</div> :
+                Object.keys(this.state.articles).map((key = article, article) => {
+                    
                     return (<div>
-
-                        <div className="feedHeader">
+{ <> <div className="feedHeader">
                             <div className="ustamp">
 
                                 <img src={this.state.articles[article].author?.image} />
@@ -86,7 +89,9 @@ class Feed extends Component {
                             }
                             <div className="feedFooter"> Read More...</div>
                         </div>
-                        <hr />
+                        <hr /></>}
+
+                       
                     </div>)
                 })}
 

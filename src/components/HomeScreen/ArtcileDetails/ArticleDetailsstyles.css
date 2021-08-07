@@ -1,7 +1,7 @@
 
-  .bodymain {
-    background: #373a3c;
-    width:100vw;
+  .articlebodymain {
+   
+    width:80vw;
     color: white;
     padding:20px;
   }
@@ -9,16 +9,36 @@
   .subheading1{
     font-weight: 600;
       font-family: titillium web,sans-serif;
-      font-size: xxx-large;
+      font-size: xx-large;
+      padding: 8px;
   }
   
   .subheading2{
     font-size: x-large;
   }
 
-  .homeContainer{
+  .articleBodyContainer{
+    background: #333;
     width:100vw;
+   display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .articlehomeContainer{
+    width:100vw;
+     
+
+  }
+
+  .articleuserName{
+    font-size: small;
+  }
+
+  .articleSubbody{
+    width:38vw;
     display:flex;
     flex-direction: column;
-
+    align-items: center; 
+    padding:15px;
   }
