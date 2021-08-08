@@ -36,9 +36,22 @@
   }
 
   .articleSubbody{
-    width:38vw;
+    width: 80vw;
+    padding: 42px;
+  }
+
+  .articleSubbodyContainer{
     display:flex;
     flex-direction: column;
-    align-items: center; 
-    padding:15px;
+    align-items: center;
+  }
+
+  .articleDetailsfooter{
+    display:flex;  
+  }
+
+  a{
+padding: 0 5px;
+text-decoration: none;
+color: #5CB85C;
   }

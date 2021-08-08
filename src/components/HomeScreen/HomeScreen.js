@@ -10,6 +10,8 @@ import SignIn from "../Signin/SignIn";
 import Signup from "../Signin/Signup";
 import Home from "./Home";
 import ArticleDetails from "./ArtcileDetails/ArticleDetails";
+import TagFeed from "../Feed/TagFeed";
+
 
 
 export default class HomeScreen extends Component {
@@ -39,6 +41,8 @@ export default class HomeScreen extends Component {
             <Signup token={this.props.token}/>
           </Route>
           <Route path="/articles/:slugid" component={ArticleDetails}>
+          </Route>
+          <Route path="/#/" component={TagFeed}>
           </Route>
         </Switch> 
       </BrowserRouter>

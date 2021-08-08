@@ -10,7 +10,7 @@ import {addArticleDetails} from "../counterSlice";
 
 
 
-class Feed extends Component {
+class TagFeed extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -60,10 +60,11 @@ class Feed extends Component {
     }
 
     render() {
+        console.log("Tag",this.state.articles,this.props.tagSelected);
         let date = new Date();
         return (
-            <>
-                {this.state.setLoadingText ? <div style={{color:"#373a3c",marginTop:"10px"}}>Loading articles...</div> :
+            <>Tag Screen
+                {/* {this.state.setLoadingText ? <div style={{color:"#373a3c",marginTop:"10px"}}>Loading articles...</div> :
                 Object.keys(this.state.articles).map((key = article, article) => {
                     
                     return (<div>
@@ -93,17 +94,12 @@ class Feed extends Component {
 
                        
                     </div>)
-                })}
+                })} */}
 
             </>)
     }
 }
 
-const mapStateToProps = (state) => ({
-    article: state.counter.articleDetails,
-    tagSelected: state.counter.tagSelected
-});
 
-const mapDispatchToProps = { addArticleDetails };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Feed))
+export default TagFeed

@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import "./ArticleDetailsstyles.css"
+import "./ArticleDetailsstyles.css";
+import { Link } from 'react-router-dom';
 
 class ArticleDetails extends Component {
     constructor(props)
     {
         super(props);
         this.state={
-        articleSelected : {}    
+        articleSelected : {},
+            
 
     }
     }
   componentDidMount(){
-       {this.props.article.map((article)=>{
+       {console.log("monting",this.props);
+           this.props.article.map((article)=>{
             if(article.slug == this.props.match.params.slugid)
             {
                this.setState({articleSelected:article})
@@ -34,13 +37,20 @@ class ArticleDetails extends Component {
 <img src={this.state.articleSelected.author?.image} />
 <div style={{padding: "3px"}}>
     <div className="articleuserName">{this.state.articleSelected.author?.username}</div>
-    <div className="ustampDate">{new Date(this.state.articleSelected.updatedAt).toUTCString()}</div>
+    <div className="ustampDate">{new Date(this.state.articleSelected.updatedAt).toLocaleDateString(undefined,{year: 'numeric', month: 'long', day: 'numeric' })}</div>
 </div>
 </div></div>
 </div>
-</div><div className="articleSubbody">
-    <div>
-          {this.state.articleSelected.body}</div></div>
+</div>
+<div className="articleSubbodyContainer">
+    <div className="articleSubbody">
+          {this.state.articleSelected.body}</div>
+          <hr/>
+         <div className="articleDetailsfooter"> <Link to="/signin">Sign in</Link> or <Link to="/signup">signup</Link> to add comments on this article.
+          
+        
+          </div>
+          </div>
           </div>  
             </>
         )
@@ -48,7 +58,8 @@ class ArticleDetails extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    article: state.counter.articleDetails
+    article: state.counter.articleDetails,
+    
 });
 
 

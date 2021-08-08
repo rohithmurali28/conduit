@@ -8,19 +8,16 @@ export default class GlobalFeed extends Component {
     render() {
         return (
             <div className="subbodyContainer">
-            <div className="subbody">
-                <div className="subheader">
-                    Global Feed
+                <div className="subbody">
+                    <div className="subheader">
+                        Global Feed
+                    </div>
+                    <hr />
+                    <Feed />
                 </div>
-               
-                <hr/>
-                <Feed/>
-                
-
-            </div>
-            <div  className="popularTagsContainer"> 
-            <PopularTags/>
-            </div>
+                <div className="popularTagsContainer">
+                    <PopularTags />
+                </div>
             </div>
         )
     }

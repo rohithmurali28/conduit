@@ -15,11 +15,15 @@ export const slice = createSlice({
       state.value += 1;
       state.articleDetails = action.payload;
     },
+    tagSelected: (state,action) => {
+     state.tagSelected = action.payload;
+    }
+
   }
 
 });
 
-export const { increment, addArticleDetails } = slice.actions;
+export const { increment, addArticleDetails, tagSelected} = slice.actions;
 
 export const selectCount = state => state.counter.value;
 

@@ -1,5 +1,5 @@
 .popularTagsContainer{
-    padding: 5px 10px 10px;
+    padding: 5px 0px;
     background: #f3f3f3;
     border-radius: 4px;  
 font-family: "Source Sans Pro", sans-serif;
@@ -9,15 +9,24 @@ color: #373a3c;
 height: max-content;
 width:max-content;
 display:flex;
-flex-direction: column;
-width: max-content;
+width: 15vw;
+margin:20px;
+flex-wrap: wrap;
 }
 
 
 
-.tagContainer{
-    background-color: #818a91;
-    border-radius: 10px;
+.popularTags{
+ width:100%;   
+}
+
+.tag{
+      background-color: #818a91;
+    border-radius: 12px;
 padding: 3px;
 color:white;
+height: fit-content;
+margin: 2px;
+height: fit-content;
+    width: fit-content;  
 }
